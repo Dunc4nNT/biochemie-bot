@@ -29,3 +29,10 @@ repository_link = "https://github.com/Dunc4nNT/biochemie-bot" # link to the bot 
 ## Running the Bot
 
 Run the `main.py` file by typing `poetry run py main.py`.
+
+
+## Using Slash Commands
+
+To use the slash commands, you must first use the `sync` command.
+
+After inviting the bot to your guild, type `-sync` in any of the channels the bot has access to. This will globally sync the slash commands.
