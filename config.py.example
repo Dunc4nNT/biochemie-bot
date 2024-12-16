@@ -1,0 +1,3 @@
+bot_token: str = ""
+command_prefix: str = "-"
+repository_link = "https://github.com/Dunc4nNT/biochemie-bot"

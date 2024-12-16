@@ -1,0 +1,132 @@
+[tool.poetry]
+name = "biochemie_bot"
+version = "0.1.0"
+description = "Bot for Biochemie module."
+authors = ["Dunc4nNT <76918336+Dunc4nNT@users.noreply.github.com>"]
+license = "MPL-2.0"
+readme = "README.md"
+repository = "https://github.com/Dunc4nNT/biochemie-bot"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+discord-py = { git = "git@github.com:Rapptz/discord.py.git" }
+psutil = "^6.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.0"
+
+
+[tool.ruff]
+target-version = "py312"
+line-length = 99
+preview = true
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "ANN",
+    "ASYNC",
+    "B",
+    "BLE",
+    "C4",
+    "COM",
+    "D",
+    "DOC",
+    "DTZ",
+    "E",
+    "EM",
+    "ERA",
+    "F",
+    "FA",
+    "FBT",
+    "FURB",
+    "G",
+    "I",
+    "INP",
+    "ISC",
+    "LOG",
+    "N",
+    "NPY",
+    "PD",
+    "PERF",
+    "PGH",
+    "PIE",
+    "PLE",
+    "PLE",
+    "PLR",
+    "PLW",
+    "PT",
+    "PTH",
+    "PYI",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "SLOT",
+    "T20",
+    "TC",
+    "TID",
+    "TRY",
+    "UP",
+    "YTT",
+]
+ignore = [
+    "D100",
+    "D104",
+    "SIM105",
+
+    # ruff conflicting lint rules
+    # source: https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "COM812",
+    "COM819",
+    "D206",
+    "D300",
+    "E111",
+    "E114",
+    "E117",
+    "ISC001",
+    "ISC002",
+]
+unfixable = ["E501", "ERA"]
+
+[tool.ruff.format]
+line-ending = "lf"
+docstring-code-format = true
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+
+[tool.pyright]
+include = ["app.py", "biochemie_bot", "tests"]
+
+pythonVersion = "3.12"
+pythonPlatform = "All"
+typeCheckingMode = "basic"
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+deprecateTypingAliases = true
+reportPropertyTypeMismatch = "error"
+reportImportCycles = "error"
+reportUnusedImport = "error"
+reportUnusedClass = "warning"
+reportUnusedFunction = "warning"
+reportUnusedVariable = "warning"
+reportDuplicateImport = "error"
+reportConstantRedefinition = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportMatchNotExhaustive = "warning"
+reportImplicitOverride = "warning"
+reportShadowedImports = "error"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
