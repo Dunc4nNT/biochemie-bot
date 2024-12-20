@@ -9,7 +9,7 @@ repository = "https://github.com/Dunc4nNT/biochemie-bot"
 
 [tool.poetry.dependencies]
 python = "^3.13"
-discord-py = { git = "git@github.com:Rapptz/discord.py.git" }
+discord-py = { git = "git@github.com:Rapptz/discord.py.git", rev = "9806aeb" }
 psutil = "^6.1.0"
 
 
